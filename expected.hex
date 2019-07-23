@@ -1,0 +1,10 @@
+Content-Type: application/json
+
+{
+	"test": "test : tests \\test \"test",
+	[
+		"simple",
+		"as",
+		"that"
+	]
+}
