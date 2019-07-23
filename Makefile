@@ -15,7 +15,7 @@ test: all
 	echo "var=%7B%22test%22%3A%22test%20%3A%20tests%20%5C%5Ctest%20%5C%22test%22%2C%5B%22simple%22%2C%0A%22as%22%2C%0A%22that%22%5D%7D" | ./jsonformat.b > output.hex
 	diff output.hex expected.hex
 
-all: format break asmbf install urldecode.b jsonformatter.b urldecode_f.b jsonformatter_f.b
+all: format break asmbf urldecode.b jsonformatter.b urldecode_f.b jsonformatter_f.b
 
 clean:
 	$(RM) $(RMFLAGS) urldecode_f.b urldecode.b jsonformatter_f.b jsonformatter.b format break output.hex
