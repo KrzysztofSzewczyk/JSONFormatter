@@ -1,0 +1,23 @@
+
+matrix:
+  fast_finish: true
+  sudo: true
+  include:
+    - language: c
+      cache:
+        directories:
+          - .
+      addons:
+        apt:
+          packages:
+            - gcc-multilib
+      script:
+        - make clean all
+    - language: c
+      addons:
+        apt:
+          packages:
+            - gcc-multilib
+      script:
+        - make clean test
+  cache: apt
