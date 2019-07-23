@@ -1,2 +1,2 @@
 #!/bin/sh
-bfi urldecode.b | bfi jsonformatter.b
+asmbf/bfi urldecode.b | asmbf/bfi jsonformatter.b
