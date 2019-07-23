@@ -3,6 +3,8 @@ RM=rm
 RMFLAGS=-rf
 
 CC=gcc
+CFLAGS=-Ofast -march=native -w
+
 GIT=git
 
 BFASM=asmbf/bfasm
@@ -18,17 +20,17 @@ test: all
 all: format break asmbf install urldecode.b jsonformatter.b urldecode_f.b jsonformatter_f.b
 
 clean:
-	$(RM) $(RMFLAGS) urldecode_f.b urldecode.b jsonformatter_f.b jsonformatter.b format break output.hex
+	$(RM) $(RMFLAGS) urldecode_f.b urldecode.b jsonformatter_f.b jsonformatter.b format break output.hex asmbf
 
 format: format.c
-	$(GCC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^
 
 break: break.c
-	$(GCC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^
 
 asmbf:
 	git clone https://github.com/KrzysztofSzewczyk/asmbf.git
-	cd asmbf && make all && cd..
+	cd asmbf && make all && cd ..
 
 install:
 	cp $(BFI) /usr/bin/bfi
