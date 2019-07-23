@@ -22,6 +22,9 @@ lbl 1
 	eq_ r2, .&
 	jnz r2, 0
 	; -----------
+	mov r2, r1
+	eq_ r2, .+
+	jnz r2, 7
 	out r1
 	jmp 1
 lbl 2
@@ -46,4 +49,7 @@ lbl 6
 	mul r1, 16
 	add r1, r2
 	out r1
+	jmp 1
+lbl 7
+	out 32
 	jmp 1
