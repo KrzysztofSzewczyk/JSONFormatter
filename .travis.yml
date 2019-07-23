@@ -4,9 +4,6 @@ matrix:
   sudo: true
   include:
     - language: c
-      cache:
-        directories:
-          - .
       addons:
         apt:
           packages:
@@ -20,4 +17,3 @@ matrix:
             - gcc-multilib
       script:
         - make clean test
-  cache: apt
