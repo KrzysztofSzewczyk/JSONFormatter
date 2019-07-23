@@ -10,7 +10,7 @@ GIT=git
 BFASM=asmbf/bfasm
 BFI=asmbf/bfi
 
-.PHONY: uninstall install all clean test
+.PHONY: all clean test
 
 test: all
 	chmod +x jsonformat.b
@@ -31,12 +31,6 @@ break: break.c
 asmbf:
 	git clone https://github.com/kspalaiologos/asmbf.git
 	cd asmbf && make all && cd ..
-
-install:
-	cp $(BFI) /usr/bin/bfi
-
-uninstall:
-	rm -f /usr/bin/bfi
 
 urldecode.b: urldecode.asm
 	$(BFASM) < $^ > $@
