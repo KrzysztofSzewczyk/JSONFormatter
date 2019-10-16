@@ -22,5 +22,5 @@ urldecode.b: urldecode.asm
 	bfasm < $^ > $@
 
 jsonformatter.b: jsonformatter.asm
-	bfi < $^ > $@
+	bfasm < $^ > $@
 
