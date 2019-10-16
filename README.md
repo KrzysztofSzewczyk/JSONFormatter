@@ -1,6 +1,19 @@
 # JSONFormatter
 JSON formatting service in... Brainfuck?
 
+Example input:
+
+```
+{
+	"test": "test : tests \\test \"test",
+	[
+		"simple",
+		"as",
+		"that"
+	]
+}
+```
+
 ## Builds
 
 | Build             | Tests             |
