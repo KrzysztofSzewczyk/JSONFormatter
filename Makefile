@@ -7,9 +7,6 @@ CFLAGS=-Ofast -march=native -w
 
 GIT=git
 
-BFASM=asmbf/bfasm
-BFI=asmbf/bfi
-
 .PHONY: all clean
 
 all: asmbf urldecode.b jsonformatter.b
@@ -19,11 +16,11 @@ clean:
 
 asmbf:
 	git clone https://github.com/kspalaiologos/asmbf.git
-	cd asmbf && make all && cd ..
+	cd asmbf && make all install && cd ..
 
 urldecode.b: urldecode.asm
-	$(BFASM) < $^ > $@
+	bfasm < $^ > $@
 
 jsonformatter.b: jsonformatter.asm
-	$(BFASM) < $^ > $@
+	bfi < $^ > $@
 
