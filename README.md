@@ -1,5 +1,7 @@
 # JSONFormatter
 
+## [Download tarball](https://github.com/kspalaiologos/JSONFormatter/releases/download/v1.0/JSONFormatter.tar)
+
 [![Build 1](https://travis-matrix-badges.herokuapp.com/repos/kspalaiologos/JSONFormatter/branches/master/1)](https://travis-ci.org/kspalaiologos/JSONFormatter)
 
 JSON formatting service in... Brainfuck?
